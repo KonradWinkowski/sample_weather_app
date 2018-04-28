@@ -20,6 +20,7 @@
 		FC68F37E2095372500B33B61 /* Elevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F37D2095372500B33B61 /* Elevation.swift */; };
 		FC68F3802095377F00B33B61 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F37F2095377F00B33B61 /* Coordinate.swift */; };
 		FC68F3822095383C00B33B61 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F3812095383C00B33B61 /* TimeZone.swift */; };
+		FC68F38420953D4E00B33B61 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FC68F37D2095372500B33B61 /* Elevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevation.swift; sourceTree = "<group>"; };
 		FC68F37F2095377F00B33B61 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		FC68F3812095383C00B33B61 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
+		FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				FC68F365209526B400B33B61 /* Assets.xcassets */,
 				FC68F367209526B400B33B61 /* LaunchScreen.storyboard */,
 				FC68F36A209526B500B33B61 /* Info.plist */,
+				FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */,
 			);
 			path = sample_weather_app;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				FC68F3802095377F00B33B61 /* Coordinate.swift in Sources */,
 				FC68F37520952AA800B33B61 /* WeatherAppNotifications.swift in Sources */,
 				FC68F37720952D1400B33B61 /* WeatherDataService.swift in Sources */,
+				FC68F38420953D4E00B33B61 /* AirportDetailViewController.swift in Sources */,
 				FC68F37C2095316900B33B61 /* Station.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,6 +38,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Airport Detail View Controller-->
+        <scene sceneID="evz-lU-9eF">
+            <objects>
+                <viewController storyboardIdentifier="airportDetailView" id="K5p-Xw-uGY" customClass="AirportDetailViewController" customModule="sample_weather_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lMv-A2-9LU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wrf-mV-21h">
+                                <rect key="frame" x="19" y="64" width="337.5" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeInfoType:" destination="K5p-Xw-uGY" eventType="valueChanged" id="OZS-Ez-IfZ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wrf-mV-21h" firstAttribute="width" secondItem="lMv-A2-9LU" secondAttribute="width" multiplier="0.9" id="F7l-iE-rjt"/>
+                            <constraint firstItem="wrf-mV-21h" firstAttribute="centerX" secondItem="4RX-cU-1ML" secondAttribute="centerX" id="FuB-qS-DUD"/>
+                            <constraint firstItem="wrf-mV-21h" firstAttribute="top" secondItem="4RX-cU-1ML" secondAttribute="top" id="uye-bN-mbq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4RX-cU-1ML"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CpI-fq-eeJ">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="cCH-YR-e1v"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoSegmentControl" destination="wrf-mV-21h" id="S4m-gW-ULB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLy-Na-psd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="46"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Cj-7o-YNU">
+            <objects>
+                <navigationController id="ec5-zO-SJN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJl-4N-M6b">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K5p-Xw-uGY" kind="relationship" relationship="rootViewController" id="59j-Kg-72D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Voh-Tr-ris" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="45"/>
         </scene>
     </scenes>
 </document>
