@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     private let locationService: LocationService = LocationService.service
+    private let weatherService: WeatherDataService = WeatherDataService.service
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +39,33 @@ class MapViewController: UIViewController {
     
     // MARK: Helpers
     
+    private func registerForWeatherDataUpdates() {
+        
+        weatherService.register { [weak self] (stations) in
+            
+        }
+        
+    }
+    
     @objc private func setupMapView() {
         
         guard locationService.isAuthorized else { return }
-        
         mapView.showsUserLocation = true
+        mapView.delegate = self
+        
+        registerForWeatherDataUpdates()
+        
     }
     
     // MARK: Notifications
 
     private func registerForNotifications() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(setupMapView), name: WeatherAppNotifications.LocationServices.authorizationStatusNotification, object: nil)
-        
     }
+    
+}
+
+extension MapViewController: MKMapViewDelegate {
     
 }
 

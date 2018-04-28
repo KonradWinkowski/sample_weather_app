@@ -18,6 +18,11 @@ final class LocationService: NSObject {
     override init() {
         super.init()
         locationManager.delegate = self
+        
+        if isAuthorized {
+            setupLocationChanges()
+        }
+        
     }
     
     public var isAuthorized: Bool {
@@ -29,17 +34,30 @@ final class LocationService: NSObject {
         locationManager.requestWhenInUseAuthorization()
     }
     
+    private func setupLocationChanges() {
+        locationManager.distanceFilter = CLLocationDistance(floatLiteral: 500)
+        locationManager.startUpdatingLocation()
+    }
+    
 }
 
 extension LocationService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else { return }
+        WeatherDataService.service.update(nearAirportsBasedOn: location)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        dump(error)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if isAuthorized {
+            setupLocationChanges()
+        }
+        
         NotificationCenter.default.post(name: WeatherAppNotifications.LocationServices.authorizationStatusNotification, object: status)
     }
     
