@@ -12,6 +12,8 @@
 		FC68F364209526B200B33B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC68F362209526B200B33B61 /* Main.storyboard */; };
 		FC68F366209526B400B33B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC68F365209526B400B33B61 /* Assets.xcassets */; };
 		FC68F369209526B400B33B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC68F367209526B400B33B61 /* LaunchScreen.storyboard */; };
+		FC68F3722095283C00B33B61 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F3712095283C00B33B61 /* LocationService.swift */; };
+		FC68F37520952AA800B33B61 /* WeatherAppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F37420952AA800B33B61 /* WeatherAppNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FC68F365209526B400B33B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC68F368209526B400B33B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC68F36A209526B500B33B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC68F3712095283C00B33B61 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		FC68F37420952AA800B33B61 /* WeatherAppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		FC68F35D209526B200B33B61 /* sample_weather_app */ = {
 			isa = PBXGroup;
 			children = (
+				FC68F37320952A8E00B33B61 /* Constants */,
 				FC68F370209527C700B33B61 /* Services */,
 				FC68F35E209526B200B33B61 /* AppDelegate.swift */,
 				FC68F360209526B200B33B61 /* MapViewController.swift */,
@@ -68,8 +73,17 @@
 		FC68F370209527C700B33B61 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FC68F3712095283C00B33B61 /* LocationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FC68F37320952A8E00B33B61 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FC68F37420952AA800B33B61 /* WeatherAppNotifications.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,8 @@
 			files = (
 				FC68F361209526B200B33B61 /* MapViewController.swift in Sources */,
 				FC68F35F209526B200B33B61 /* AppDelegate.swift in Sources */,
+				FC68F3722095283C00B33B61 /* LocationService.swift in Sources */,
+				FC68F37520952AA800B33B61 /* WeatherAppNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
