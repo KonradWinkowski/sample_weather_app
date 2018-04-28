@@ -21,6 +21,8 @@
 		FC68F3802095377F00B33B61 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F37F2095377F00B33B61 /* Coordinate.swift */; };
 		FC68F3822095383C00B33B61 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F3812095383C00B33B61 /* TimeZone.swift */; };
 		FC68F38420953D4E00B33B61 /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */; };
+		FC68F38720953EE500B33B61 /* AirportAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */; };
+		FC68F38920953F2900B33B61 /* AirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38820953F2900B33B61 /* AirportAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FC68F37F2095377F00B33B61 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		FC68F3812095383C00B33B61 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
 		FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
+		FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotationView.swift; sourceTree = "<group>"; };
+		FC68F38820953F2900B33B61 /* AirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		FC68F35D209526B200B33B61 /* sample_weather_app */ = {
 			isa = PBXGroup;
 			children = (
+				FC68F38520953ECF00B33B61 /* Views */,
 				FC68F3782095310600B33B61 /* Models */,
 				FC68F37320952A8E00B33B61 /* Constants */,
 				FC68F370209527C700B33B61 /* Services */,
@@ -111,8 +116,17 @@
 				FC68F37D2095372500B33B61 /* Elevation.swift */,
 				FC68F37F2095377F00B33B61 /* Coordinate.swift */,
 				FC68F3812095383C00B33B61 /* TimeZone.swift */,
+				FC68F38820953F2900B33B61 /* AirportAnnotation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FC68F38520953ECF00B33B61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +209,10 @@
 				FC68F3802095377F00B33B61 /* Coordinate.swift in Sources */,
 				FC68F37520952AA800B33B61 /* WeatherAppNotifications.swift in Sources */,
 				FC68F37720952D1400B33B61 /* WeatherDataService.swift in Sources */,
+				FC68F38720953EE500B33B61 /* AirportAnnotationView.swift in Sources */,
 				FC68F38420953D4E00B33B61 /* AirportDetailViewController.swift in Sources */,
 				FC68F37C2095316900B33B61 /* Station.swift in Sources */,
+				FC68F38920953F2900B33B61 /* AirportAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

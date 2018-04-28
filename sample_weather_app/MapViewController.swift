@@ -16,6 +16,8 @@ class MapViewController: UIViewController {
     private let locationService: LocationService = LocationService.service
     private let weatherService: WeatherDataService = WeatherDataService.service
     
+    private var previousAnnotations: [MKAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerForNotifications()
@@ -37,12 +39,24 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: UI Updates
+    
+    private func update(mapAnnotationsWith stations: Stations) {
+       
+        mapView.removeAnnotations(previousAnnotations)
+        
+        let annotations = stations.airports.map({ AirportAnnotation(with: $0) })
+        previousAnnotations = annotations
+        mapView.addAnnotations(previousAnnotations)
+        
+    }
+    
     // MARK: Helpers
     
     private func registerForWeatherDataUpdates() {
         
         weatherService.register { [weak self] (stations) in
-            
+            self?.update(mapAnnotationsWith: stations)
         }
         
     }
@@ -66,6 +80,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        dump(view.annotation)
+    }
     
 }
 

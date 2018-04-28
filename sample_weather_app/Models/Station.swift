@@ -15,6 +15,7 @@ struct Station: Codable {
     public let name: String
     public let activated: String?
     public let city: String
+    public let state: String
     public let country: String
     public let elevation: Elevation
     public let latitude: Coordinate
@@ -25,6 +26,10 @@ struct Station: Codable {
     public let timezone: TimeZone
     public let type: String
     public let usage: String?
+    
+    public var address: String {
+        return "\(city) \(state)"
+    }
     
     public var location: CLLocation {
         return CLLocation(coordinate: CLLocationCoordinate2D(latitude: latitude.decimal, longitude: longitude.decimal), altitude: Double(elevation.meter), horizontalAccuracy: 5.0, verticalAccuracy: 5.0, timestamp: Date())
