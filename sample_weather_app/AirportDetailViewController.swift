@@ -179,8 +179,8 @@ extension AirportDetailViewController: UITableViewDataSource {
             cell.itemNameLabel.text = "Type"
             cell.itemDetailLabel.text = station?.type
         case 4:
-            cell.itemNameLabel.text = "Usage"
-            cell.itemDetailLabel.text = station?.usage
+            cell.itemNameLabel.text = "Useage"
+            cell.itemDetailLabel.text = station?.useage
         case 5:
             cell.itemNameLabel.text = "Status"
             cell.itemDetailLabel.text = station?.status
@@ -195,7 +195,7 @@ extension AirportDetailViewController: UITableViewDataSource {
             
         case 7:
             cell.itemNameLabel.text = "TimeZone"
-            cell.itemDetailLabel.text = station?.icao
+            cell.itemDetailLabel.text = station?.timezone?.tzid
         case 8:
             cell.itemNameLabel.text = "Location"
             cell.itemDetailLabel.text = "\(station?.latitude.decimal ?? -1)\n\(station?.longitude.decimal ?? -1)"
