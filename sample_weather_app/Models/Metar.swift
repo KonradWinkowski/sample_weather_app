@@ -16,16 +16,16 @@ struct Metar: Codable {
     let name: String
     let observed: String
     let raw_text: String
-    let barometer: Baromoter
+    let barometer: Baromoter?
     let ceiling: Ceiling?
     let clouds: [Clouds]
-    let dewpoint: Temperature
-    let elevation: Elevation
+    let dewpoint: Temperature?
+    let elevation: Elevation?
     let flight_category: String
     let humidity_percent: Float
-    let temperature: Temperature
-    let visibility: Visibility
-    let wind: Wind
+    let temperature: Temperature?
+    let visibility: Visibility?
+    let wind: Wind?
     
     var date: Date? {
         Metar.metarDateFormatter.dateFormat = "dd-MM-YYYY '@' HH:mmz"

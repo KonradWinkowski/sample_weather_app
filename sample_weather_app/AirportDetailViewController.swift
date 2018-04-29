@@ -235,14 +235,18 @@ extension AirportDetailViewController: UITableViewDataSource {
         case 3:
             cell.itemNameLabel.text = "Wind"
             
-            var detailText = "\(metar.wind.degrees)˚ w/ wind speed of \(metar.wind.speed_kts) kts"
-            if let gusts = metar.wind.gust_kts {
-                detailText = detailText + " gusts up to \(gusts) kts"
+            if let wind = metar.wind {
+                var detailText = "\(wind.degrees)˚ w/ wind speed of \(wind.speed_kts) kts"
+                if let gusts = wind.gust_kts {
+                    detailText = detailText + " gusts up to \(gusts) kts"
+                }
+                cell.itemDetailLabel.text = detailText
+            } else {
+                cell.itemDetailLabel.text = "N/A"
             }
-            cell.itemDetailLabel.text = detailText
         case 4:
             cell.itemNameLabel.text = "Visibility"
-            cell.itemDetailLabel.text = "\(metar.visibility.miles) miles"
+            cell.itemDetailLabel.text = "\(metar.visibility?.miles ?? "N/A")"
         case 5:
             cell.itemNameLabel.text = "Clouds"
             if let cloud = metar.clouds.first {
@@ -251,12 +255,18 @@ extension AirportDetailViewController: UITableViewDataSource {
                 cell.itemDetailLabel.text = "N/A"
             }
         case 6:
-            cell.itemNameLabel.text = "Temp : \(metar.temperature.fahrenheit)˚ F / \(metar.temperature.celsius)˚ C"
-            cell.itemDetailLabel.text = "Dew : \(metar.dewpoint.fahrenheit)˚ F / \(metar.dewpoint.celsius)˚ C"
+            
+            if let temperature = metar.temperature, let dewpoint = metar.dewpoint {
+                cell.itemNameLabel.text = "Temp : \(temperature.fahrenheit)˚ F / \(temperature.celsius)˚ C"
+                cell.itemDetailLabel.text = "Dew : \(dewpoint.fahrenheit)˚ F / \(dewpoint.celsius)˚ C"
+            } else {
+                cell.itemNameLabel.text = "Temp : N/A"
+                cell.itemDetailLabel.text = "Dew : N/A"
+            }
         case 7:
             cell.itemNameLabel.text = "Altimeter"
             
-            if let hg = metar.barometer.hg {
+            if let hg = metar.barometer?.hg {
                 cell.itemDetailLabel.text = "\(hg)"
             } else {
                 cell.itemDetailLabel.text = "N/A"
