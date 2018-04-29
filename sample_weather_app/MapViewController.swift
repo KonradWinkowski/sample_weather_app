@@ -28,6 +28,12 @@ class MapViewController: UIViewController {
         super.viewDidAppear(animated)
         
         guard locationService.isAuthorized else {
+            
+            guard locationService.isDenied == false else {
+               showLocationServicesDeniedAlert()
+                return
+            }
+            
             locationService.requestLocationUsage()
             return
         }
@@ -52,6 +58,12 @@ class MapViewController: UIViewController {
         
     }
     
+    private func showLocationServicesDeniedAlert() {
+        let alert = UIAlertController(title: "Location Services", message: "We noticed that you have denied the app to access your location. For this app to function properly we need at least access to your location when you are useing the app. Please go to the 'Settings' app on your device and change the location permissions for this app. Thank you!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: Helpers
     
     private func registerForWeatherDataUpdates() {
@@ -64,7 +76,12 @@ class MapViewController: UIViewController {
     
     @objc private func setupMapView() {
         
-        guard locationService.isAuthorized else { return }
+        guard locationService.isAuthorized else {
+            if locationService.isDenied {
+                showLocationServicesDeniedAlert()
+            }
+            return
+        }
         mapView.showsUserLocation = true
         mapView.delegate = self
         

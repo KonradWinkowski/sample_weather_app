@@ -29,6 +29,10 @@ final class LocationService: NSObject {
         return CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways
     }
     
+    public var isDenied: Bool {
+        return CLLocationManager.authorizationStatus() == .denied
+    }
+    
     // MARK: Authorization
     public func requestLocationUsage() {
         locationManager.requestWhenInUseAuthorization()
