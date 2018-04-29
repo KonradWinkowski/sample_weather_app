@@ -11,6 +11,8 @@ import UIKit
 class InfoTableViewCell: UITableViewCell {
 
     @IBOutlet var views: [UIView]!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemDetailLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         

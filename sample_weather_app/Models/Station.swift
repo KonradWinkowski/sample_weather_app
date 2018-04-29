@@ -28,7 +28,7 @@ struct Station: Codable {
     public let usage: String?
     
     public var address: String {
-        return "\(city) \(state)"
+        return "\(city) \(state) \(country)"
     }
     
     public var location: CLLocation {

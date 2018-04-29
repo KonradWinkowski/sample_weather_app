@@ -110,8 +110,9 @@ extension MapViewController: MKMapViewDelegate {
             return
         }
         
-        vc.station = airportAnnotation.station
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: true) { [vc, airportAnnotation] in
+            vc.station = airportAnnotation.station
+        }
         
     }
     

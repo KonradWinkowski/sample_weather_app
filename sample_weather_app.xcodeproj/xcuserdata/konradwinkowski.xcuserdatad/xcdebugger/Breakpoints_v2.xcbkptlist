@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sample_weather_app/MapViewController.swift"
-            timestampString = "546654231.279097"
+            timestampString = "546719618.358922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "update(mapAnnotationsWith:)"
             landmarkType = "7">
          </BreakpointContent>
