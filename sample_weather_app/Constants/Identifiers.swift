@@ -12,4 +12,12 @@ struct K {
     struct ViewController {
         static let airportDetailViewController: String = "airportDetailView"
     }
+    
+    struct TableViewCell {
+        static let infoTableViewCell: String = "infoTableViewCell"
+    }
+    
+    struct MapViewAnnotation {
+        static let airportAnnotation: String = "airportAnnotationReuseIdentifier"
+    }
 }

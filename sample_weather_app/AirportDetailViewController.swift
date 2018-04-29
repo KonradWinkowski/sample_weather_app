@@ -12,6 +12,8 @@ class AirportDetailViewController: UIViewController {
 
     @IBOutlet weak var infoSegmentControl: UISegmentedControl!
     
+    @IBOutlet weak var doneButton: UIButton!
+    
     public var station: Station? {
         didSet {
             
@@ -20,6 +22,8 @@ class AirportDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        doneButton.layer.cornerRadius = 5.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +36,7 @@ class AirportDetailViewController: UIViewController {
         
     }
 
+    @IBAction func didTapDoneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

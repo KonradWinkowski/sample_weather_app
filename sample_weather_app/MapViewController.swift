@@ -15,13 +15,12 @@ class MapViewController: UIViewController {
     
     private let locationService: LocationService = LocationService.service
     private let weatherService: WeatherDataService = WeatherDataService.service
-    private let airportAnnotationReuseIdentifier: String = "airportAnnotationReuseIdentifier"
     
     private var previousAnnotations: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: airportAnnotationReuseIdentifier)
+        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: K.MapViewAnnotation.airportAnnotation)
         registerForNotifications()
     }
     
@@ -87,10 +86,10 @@ extension MapViewController: MKMapViewDelegate {
         
         guard let airportAnnotation = annotation as? AirportAnnotation else { return nil }
         
-        var annotationView: MKAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: airportAnnotationReuseIdentifier, for: airportAnnotation)
+        var annotationView: MKAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: K.MapViewAnnotation.airportAnnotation, for: airportAnnotation)
         
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: airportAnnotation, reuseIdentifier: airportAnnotationReuseIdentifier)
+            annotationView = MKAnnotationView(annotation: airportAnnotation, reuseIdentifier: K.MapViewAnnotation.airportAnnotation)
         }
         
         annotationView?.image = UIImage(named: "icon_airport")

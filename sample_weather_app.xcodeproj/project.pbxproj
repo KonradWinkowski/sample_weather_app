@@ -24,6 +24,7 @@
 		FC68F38720953EE500B33B61 /* AirportAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */; };
 		FC68F38920953F2900B33B61 /* AirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38820953F2900B33B61 /* AirportAnnotation.swift */; };
 		FC68F38B2095476700B33B61 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38A2095476700B33B61 /* Identifiers.swift */; };
+		FC68F38E2095497800B33B61 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F38D2095497800B33B61 /* InfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotationView.swift; sourceTree = "<group>"; };
 		FC68F38820953F2900B33B61 /* AirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotation.swift; sourceTree = "<group>"; };
 		FC68F38A2095476700B33B61 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		FC68F38D2095497800B33B61 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +129,18 @@
 		FC68F38520953ECF00B33B61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC68F38C2095496000B33B61 /* Cells */,
 				FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FC68F38C2095496000B33B61 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC68F38D2095497800B33B61 /* InfoTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				FC68F35F209526B200B33B61 /* AppDelegate.swift in Sources */,
 				FC68F38B2095476700B33B61 /* Identifiers.swift in Sources */,
 				FC68F37A2095312000B33B61 /* Stations.swift in Sources */,
+				FC68F38E2095497800B33B61 /* InfoTableViewCell.swift in Sources */,
 				FC68F3722095283C00B33B61 /* LocationService.swift in Sources */,
 				FC68F3802095377F00B33B61 /* Coordinate.swift in Sources */,
 				FC68F37520952AA800B33B61 /* WeatherAppNotifications.swift in Sources */,
