@@ -255,7 +255,12 @@ extension AirportDetailViewController: UITableViewDataSource {
             cell.itemDetailLabel.text = "Dew : \(metar.dewpoint.fahrenheit)˚ F / \(metar.dewpoint.celsius)˚ C"
         case 7:
             cell.itemNameLabel.text = "Altimeter"
-            cell.itemDetailLabel.text = "\(metar.barometer.hg)"
+            
+            if let hg = metar.barometer.hg {
+                cell.itemDetailLabel.text = "\(hg)"
+            } else {
+                cell.itemDetailLabel.text = "N/A"
+            }            
         case 8:
             cell.itemNameLabel.text = "Humidity"
             cell.itemDetailLabel.text = "\(metar.humidity_percent) %"

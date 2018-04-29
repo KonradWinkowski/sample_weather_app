@@ -17,7 +17,7 @@ struct Metar: Codable {
     let observed: String
     let raw_text: String
     let barometer: Baromoter
-    let ceiling: Ceiling
+    let ceiling: Ceiling?
     let clouds: [Clouds]
     let dewpoint: Temperature
     let elevation: Elevation

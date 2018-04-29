@@ -33,6 +33,8 @@
 		FC68F39B2096054100B33B61 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F39A2096054100B33B61 /* Temperature.swift */; };
 		FC68F39D209605C600B33B61 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F39C209605C600B33B61 /* Visibility.swift */; };
 		FC68F39F209605F900B33B61 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F39E209605F900B33B61 /* Wind.swift */; };
+		FC68F3A12096541600B33B61 /* AirportAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC68F3A02096541600B33B61 /* AirportAnnotationView.xib */; };
+		FC68F3A42096549600B33B61 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F3A32096549600B33B61 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		FC68F39A2096054100B33B61 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		FC68F39C209605C600B33B61 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
 		FC68F39E209605F900B33B61 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		FC68F3A02096541600B33B61 /* AirportAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportAnnotationView.xib; sourceTree = "<group>"; };
+		FC68F3A32096549600B33B61 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +152,10 @@
 		FC68F38520953ECF00B33B61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC68F3A22096548500B33B61 /* Extensions */,
 				FC68F38C2095496000B33B61 /* Cells */,
 				FC68F38620953EE500B33B61 /* AirportAnnotationView.swift */,
+				FC68F3A02096541600B33B61 /* AirportAnnotationView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				FC68F39E209605F900B33B61 /* Wind.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		FC68F3A22096548500B33B61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC68F3A32096549600B33B61 /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC68F369209526B400B33B61 /* LaunchScreen.storyboard in Resources */,
+				FC68F3A12096541600B33B61 /* AirportAnnotationView.xib in Resources */,
 				FC68F366209526B400B33B61 /* Assets.xcassets in Resources */,
 				FC68F364209526B200B33B61 /* Main.storyboard in Resources */,
 			);
@@ -254,6 +269,7 @@
 				FC68F35F209526B200B33B61 /* AppDelegate.swift in Sources */,
 				FC68F38B2095476700B33B61 /* Identifiers.swift in Sources */,
 				FC68F37A2095312000B33B61 /* Stations.swift in Sources */,
+				FC68F3A42096549600B33B61 /* View.swift in Sources */,
 				FC68F38E2095497800B33B61 /* InfoTableViewCell.swift in Sources */,
 				FC68F399209604E400B33B61 /* Clouds.swift in Sources */,
 				FC68F3722095283C00B33B61 /* LocationService.swift in Sources */,

@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: K.MapViewAnnotation.airportAnnotation)
+        mapView.register(AirportAnnotationView.self, forAnnotationViewWithReuseIdentifier: K.MapViewAnnotation.airportAnnotation)
         registerForNotifications()
     }
     
@@ -103,15 +103,35 @@ extension MapViewController: MKMapViewDelegate {
         
         guard let airportAnnotation = annotation as? AirportAnnotation else { return nil }
         
-        var annotationView: MKAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: K.MapViewAnnotation.airportAnnotation, for: airportAnnotation)
+        var annotationView: AirportAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: K.MapViewAnnotation.airportAnnotation, for: airportAnnotation) as? AirportAnnotationView
         
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: airportAnnotation, reuseIdentifier: K.MapViewAnnotation.airportAnnotation)
+            annotationView = AirportAnnotationView(annotation: airportAnnotation, reuseIdentifier: K.MapViewAnnotation.airportAnnotation)
         }
         
-        annotationView?.image = UIImage(named: "icon_airport")
         annotationView?.annotation = airportAnnotation
         annotationView?.canShowCallout = true
+        
+        weatherService.metar(for: airportAnnotation.station.icao) { [annotationView] (metar, error) in
+            
+            DispatchQueue.main.async {
+                if let mtr = metar {
+                    switch mtr.flight_category {
+                    case "VFR":
+                        annotationView?.imageView.tintColor = UIColor.green
+                    case "MVFR":
+                        annotationView?.imageView.tintColor = UIColor.blue
+                    case "IFR":
+                        annotationView?.imageView.tintColor = UIColor.red
+                    case "LIFR":
+                        annotationView?.imageView.tintColor = UIColor.magenta
+                    default:
+                        annotationView?.imageView.tintColor = UIColor.black
+                    }
+                }
+            }
+            
+        }
         
         return annotationView
     

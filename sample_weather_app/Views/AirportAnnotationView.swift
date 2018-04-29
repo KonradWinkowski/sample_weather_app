@@ -9,6 +9,27 @@
 import Foundation
 import MapKit
 
-final class AirportAnnotationView {
+final class AirportAnnotationView: MKAnnotationView {
+    
+    @IBOutlet var view: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        viewInit()        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        viewInit()
+    }
+    
+    private func viewInit() {
+        self.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        _ = loadFromNib("AirportAnnotationView")
+        view.frame = bounds
+        addSubview(view)
+        view.bindFrameToSuperviewBounds()
+    }
     
 }

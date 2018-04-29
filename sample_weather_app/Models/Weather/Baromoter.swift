@@ -9,7 +9,7 @@
 import Foundation
 
 struct Baromoter: Codable {
-    let hg: Float
-    let kpa: Float
-    let mb: Float
+    let hg: Float?
+    let kpa: Float?
+    let mb: Float?
 }

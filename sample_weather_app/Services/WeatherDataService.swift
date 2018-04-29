@@ -126,7 +126,7 @@ final class WeatherDataService {
     
     // MARK: Request Helpers
     
-    private func get(metarFromCacheFor icao: String) -> Metar? {
+    public func get(metarFromCacheFor icao: String) -> Metar? {
         
         var value: Metar? = nil
         
