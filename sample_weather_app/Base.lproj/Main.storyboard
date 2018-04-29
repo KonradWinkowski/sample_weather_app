@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wrf-mV-21h">
-                                <rect key="frame" x="19" y="64" width="337.5" height="29"/>
+                                <rect key="frame" x="19" y="20" width="337.5" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -75,23 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLy-Na-psd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108" y="46"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8Cj-7o-YNU">
-            <objects>
-                <navigationController id="ec5-zO-SJN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJl-4N-M6b">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="K5p-Xw-uGY" kind="relationship" relationship="rootViewController" id="59j-Kg-72D"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Voh-Tr-ris" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1402" y="45"/>
+            <point key="canvasLocation" x="972" y="46"/>
         </scene>
     </scenes>
 </document>

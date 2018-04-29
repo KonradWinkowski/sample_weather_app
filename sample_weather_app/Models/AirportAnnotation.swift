@@ -23,7 +23,7 @@ final class AirportAnnotation: NSObject, MKAnnotation {
         return station.address
     }
     
-    private let station: Station
+    public let station: Station
     
     init(with station: Station) {
         self.station = station

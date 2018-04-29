@@ -15,11 +15,13 @@ class MapViewController: UIViewController {
     
     private let locationService: LocationService = LocationService.service
     private let weatherService: WeatherDataService = WeatherDataService.service
+    private let airportAnnotationReuseIdentifier: String = "airportAnnotationReuseIdentifier"
     
     private var previousAnnotations: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: airportAnnotationReuseIdentifier)
         registerForNotifications()
     }
     
@@ -81,8 +83,37 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate {
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        guard let airportAnnotation = annotation as? AirportAnnotation else { return nil }
+        
+        var annotationView: MKAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: airportAnnotationReuseIdentifier, for: airportAnnotation)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: airportAnnotation, reuseIdentifier: airportAnnotationReuseIdentifier)
+        }
+        
+        annotationView?.image = UIImage(named: "icon_airport")
+        annotationView?.annotation = airportAnnotation
+        annotationView?.canShowCallout = true
+        
+        return annotationView
+    
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        dump(view.annotation)
+        
+        guard let airportAnnotation = view.annotation as? AirportAnnotation else {
+            return
+        }
+        
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: K.ViewController.airportDetailViewController) as? AirportDetailViewController else {
+            return
+        }
+        
+        vc.station = airportAnnotation.station
+        present(vc, animated: true, completion: nil)
+        
     }
     
 }

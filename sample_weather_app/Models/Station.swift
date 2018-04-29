@@ -23,7 +23,7 @@ struct Station: Codable {
     public let magnetic_variation: String?
     public let magnetic_variation_year: Int?
     public let status: String
-    public let timezone: TimeZone
+//    public let timezone: TimeZone?
     public let type: String
     public let usage: String?
     

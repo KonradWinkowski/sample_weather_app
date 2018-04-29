@@ -12,6 +12,12 @@ class AirportDetailViewController: UIViewController {
 
     @IBOutlet weak var infoSegmentControl: UISegmentedControl!
     
+    public var station: Station? {
+        didSet {
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

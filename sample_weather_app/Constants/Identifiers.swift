@@ -1,5 +1,5 @@
 //
-//  TimeZone.swift
+//  Identifiers.swift
 //  sample_weather_app
 //
 //  Created by Konrad Winkowski on 4/28/18.
@@ -8,10 +8,8 @@
 
 import Foundation
 
-struct TimeZone: Codable {
-    
-    public let gmt : Int?
-    public let dst : Int?
-    public let tzid: String?
-    
+struct K {
+    struct ViewController {
+        static let airportDetailViewController: String = "airportDetailView"
+    }
 }
