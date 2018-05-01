@@ -35,6 +35,7 @@
 		FC68F39F209605F900B33B61 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F39E209605F900B33B61 /* Wind.swift */; };
 		FC68F3A12096541600B33B61 /* AirportAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC68F3A02096541600B33B61 /* AirportAnnotationView.xib */; };
 		FC68F3A42096549600B33B61 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F3A32096549600B33B61 /* View.swift */; };
+		FC9C7AA720989B5400E4EA30 /* test_locations.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FC9C7AA620989B5400E4EA30 /* test_locations.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FC68F39E209605F900B33B61 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		FC68F3A02096541600B33B61 /* AirportAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportAnnotationView.xib; sourceTree = "<group>"; };
 		FC68F3A32096549600B33B61 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FC9C7AA620989B5400E4EA30 /* test_locations.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_locations.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FC68F38320953D4E00B33B61 /* AirportDetailViewController.swift */,
 				FC68F362209526B200B33B61 /* Main.storyboard */,
 				FC68F365209526B400B33B61 /* Assets.xcassets */,
+				FC9C7AA620989B5400E4EA30 /* test_locations.gpx */,
 				FC68F367209526B400B33B61 /* LaunchScreen.storyboard */,
 				FC68F36A209526B500B33B61 /* Info.plist */,
 			);
@@ -250,6 +253,7 @@
 				FC68F369209526B400B33B61 /* LaunchScreen.storyboard in Resources */,
 				FC68F3A12096541600B33B61 /* AirportAnnotationView.xib in Resources */,
 				FC68F366209526B400B33B61 /* Assets.xcassets in Resources */,
+				FC9C7AA720989B5400E4EA30 /* test_locations.gpx in Resources */,
 				FC68F364209526B200B33B61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
