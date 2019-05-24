@@ -17,7 +17,7 @@ final class WeatherDataService {
     
     public static let service: WeatherDataService = WeatherDataService()
     
-    private let key: String = "54ea5aafe4f56f20af6af65add"
+    private let key: String = "d49770979d758aab9d0ce5cdeb"
     private let rootPath: String = "https://api.checkwx.com"
     private let defaultSession: URLSession = URLSession(configuration: URLSessionConfiguration.default)
     private let jsonDecoder = JSONDecoder()
