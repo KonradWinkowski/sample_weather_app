@@ -14,21 +14,20 @@ struct Station: Codable {
     public let icao: String
     public let name: String
     public let activated: String?
-    public let city: String
-    public let state: String
-    public let country: String
+    public let city: String?
+    public let state: State
+    public let country: Country
     public let elevation: Elevation
     public let latitude: Coordinate
     public let longitude: Coordinate
-    public let magnetic_variation: String?
-    public let magnetic_variation_year: Int?
+    public let magnetic_variation: MagneticVariation?
     public let status: String
     public let timezone: TimeZone?
     public let type: String
     public let useage: String?
     
     public var address: String {
-        return "\(city) \(state) \(country)"
+        return "\(String(describing: city)) \(state.name) \(country.name)"
     }
     
     public var location: CLLocation {

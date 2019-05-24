@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC5BAD2722981B1900D3B1FB /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BAD2622981B1900D3B1FB /* State.swift */; };
+		FC5BAD2922981B7100D3B1FB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BAD2822981B7100D3B1FB /* Country.swift */; };
+		FC5BAD2B22981BE400D3B1FB /* MagneticVariation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BAD2A22981BE400D3B1FB /* MagneticVariation.swift */; };
+		FC5BAD2D22981DA000D3B1FB /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BAD2C22981DA000D3B1FB /* Humidity.swift */; };
 		FC68F35F209526B200B33B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F35E209526B200B33B61 /* AppDelegate.swift */; };
 		FC68F361209526B200B33B61 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68F360209526B200B33B61 /* MapViewController.swift */; };
 		FC68F364209526B200B33B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC68F362209526B200B33B61 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC5BAD2622981B1900D3B1FB /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		FC5BAD2822981B7100D3B1FB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FC5BAD2A22981BE400D3B1FB /* MagneticVariation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagneticVariation.swift; sourceTree = "<group>"; };
+		FC5BAD2C22981DA000D3B1FB /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
 		FC68F35B209526B200B33B61 /* sample_weather_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample_weather_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC68F35E209526B200B33B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC68F360209526B200B33B61 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,9 @@
 				FC68F38820953F2900B33B61 /* AirportAnnotation.swift */,
 				FC68F38F209602AE00B33B61 /* Metar.swift */,
 				FC68F391209603BE00B33B61 /* Metars.swift */,
+				FC5BAD2622981B1900D3B1FB /* State.swift */,
+				FC5BAD2822981B7100D3B1FB /* Country.swift */,
+				FC5BAD2A22981BE400D3B1FB /* MagneticVariation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				FC68F39A2096054100B33B61 /* Temperature.swift */,
 				FC68F39C209605C600B33B61 /* Visibility.swift */,
 				FC68F39E209605F900B33B61 /* Wind.swift */,
+				FC5BAD2C22981DA000D3B1FB /* Humidity.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -269,8 +281,10 @@
 				FC68F3952096043200B33B61 /* Baromoter.swift in Sources */,
 				FC68F37E2095372500B33B61 /* Elevation.swift in Sources */,
 				FC68F3822095383C00B33B61 /* TimeZone.swift in Sources */,
+				FC5BAD2922981B7100D3B1FB /* Country.swift in Sources */,
 				FC68F392209603BE00B33B61 /* Metars.swift in Sources */,
 				FC68F35F209526B200B33B61 /* AppDelegate.swift in Sources */,
+				FC5BAD2B22981BE400D3B1FB /* MagneticVariation.swift in Sources */,
 				FC68F38B2095476700B33B61 /* Identifiers.swift in Sources */,
 				FC68F37A2095312000B33B61 /* Stations.swift in Sources */,
 				FC68F3A42096549600B33B61 /* View.swift in Sources */,
@@ -288,6 +302,8 @@
 				FC68F38420953D4E00B33B61 /* AirportDetailViewController.swift in Sources */,
 				FC68F37C2095316900B33B61 /* Station.swift in Sources */,
 				FC68F38920953F2900B33B61 /* AirportAnnotation.swift in Sources */,
+				FC5BAD2722981B1900D3B1FB /* State.swift in Sources */,
+				FC5BAD2D22981DA000D3B1FB /* Humidity.swift in Sources */,
 				FC68F390209602AE00B33B61 /* Metar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

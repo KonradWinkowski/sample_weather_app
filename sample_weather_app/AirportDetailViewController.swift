@@ -203,7 +203,7 @@ extension AirportDetailViewController: UITableViewDataSource {
             cell.itemNameLabel.text = "Magnetic Variation"
             
             if let mv = station?.magnetic_variation {
-                cell.itemDetailLabel.text = mv
+                cell.itemDetailLabel.text = mv.position
             } else {
                 cell.itemDetailLabel.text = "NA"
             }
@@ -273,7 +273,7 @@ extension AirportDetailViewController: UITableViewDataSource {
             }            
         case 8:
             cell.itemNameLabel.text = "Humidity"
-            cell.itemDetailLabel.text = "\(metar.humidity_percent) %"
+            cell.itemDetailLabel.text = "\(metar.humidity.percent) %"
         default:
             break
         }

@@ -13,7 +13,6 @@ struct Metar: Codable {
     static let metarDateFormatter: DateFormatter = DateFormatter()
     
     let icao: String
-    let name: String
     let observed: String
     let raw_text: String
     let barometer: Baromoter?
@@ -22,7 +21,7 @@ struct Metar: Codable {
     let dewpoint: Temperature?
     let elevation: Elevation?
     let flight_category: String
-    let humidity_percent: Float
+    let humidity: Humidity
     let temperature: Temperature?
     let visibility: Visibility?
     let wind: Wind?
